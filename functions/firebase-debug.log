@@ -1,0 +1,27 @@
+[debug] [2018-10-17T13:52:52.732Z] ----------------------------------------------------------------------
+[debug] [2018-10-17T13:52:52.734Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\67563387\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-17T13:52:52.735Z] CLI Version:   5.1.1
+[debug] [2018-10-17T13:52:52.735Z] Platform:      win32
+[debug] [2018-10-17T13:52:52.735Z] Node Version:  v8.11.4
+[debug] [2018-10-17T13:52:52.736Z] Time:          Wed Oct 17 2018 15:52:52 GMT+0200 (Hora de verano romance)
+[debug] [2018-10-17T13:52:52.736Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-17T13:52:52.753Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-17T13:52:52.754Z] > authorizing via signed-in user
+[debug] [2018-10-17T13:52:52.754Z] [iam] checking project spacycopy for permissions ["firebase.projects.get"]
+[debug] [2018-10-17T13:52:52.755Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spacycopy:testIamPermissions  
+
+[debug] [2018-10-17T13:52:55.612Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-17T13:52:55.613Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/spacycopy  
+ 
+[debug] [2018-10-17T13:52:56.670Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\67563387\Desktop\spacesWorkshop'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-10-17T13:52:57.631Z] Fetching environment
+[debug] [2018-10-17T13:52:57.634Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/611151714074:getServerAppConfig  
+ 
+[debug] [2018-10-17T13:52:57.977Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-17T13:52:57.977Z] Starting @google-cloud/functions-emulator
+[debug] [2018-10-17T13:53:00.131Z] Parsing function triggers

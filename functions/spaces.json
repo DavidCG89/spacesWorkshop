@@ -1,0 +1,11 @@
+{
+    "cities": 
+    [{
+        "name": "Madrid",
+        "spaces": ["Rio","Atocha","Castellana"]
+    },
+    {
+        "name": "Barcelona",
+        "spaces": ["RioC","AtochaC","CastellanaC"]
+    }]
+}
