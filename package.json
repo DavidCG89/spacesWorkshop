@@ -1,0 +1,21 @@
+{
+  "name": "spaces",
+  "version": "1.0.0",
+  "description": "Fulfillment for spaces bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "keywords": [
+    "spacy",
+    "spaces"
+  ],
+  "author": "NeonProyect&\u001b[D\u001b[D\u001b[D\u001b[j\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Comunica+A",
+  "license": "ISC",
+  "dependencies": {
+    "actions-on-google": "^2.4.1",
+    "body-parser": "^1.18.3",
+    "dialogflow-fulfillment": "^0.6.1",
+    "express": "^4.16.4"
+  }
+}
