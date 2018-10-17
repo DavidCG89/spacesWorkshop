@@ -1,5 +1,5 @@
 const functions = require('firebase-functions');
-const {BasicCard, Button, Carousel, Image, SimpleResponse, dialogflow} = require('actions-on-google');
+const {BasicCard, Button, Carousel, BImage, SimpleResponse, dialogflow} = require('actions-on-google');
 const fs = require('fs');
 
 const app = dialogflow({debug: false});
@@ -30,37 +30,57 @@ app.intent('Default Welcome Intent', function(conv) {
 });
 
 app.intent('Booking', function(conv) {
-    console.log(conv.parameters);
     if(!conv.parameters.date) {
-        console.log("Estamos en preguntar date");
         conv.ask(new SimpleResponse({
             speech: 'When do you want to book the room?',
             text: 'When do you want to book the room?',
           }));
     }
     else if(!conv.parameters.time) {
-        console.log("Estamos en preguntar time");
         conv.ask(new SimpleResponse({
             speech: 'At what time?',
             text: 'At what time?',
           }));
     }
-    else if(!conv.parameters.Space) {
+    else if(!conv.parameters.City) {
         conv.ask(new SimpleResponse({
-            speech: "I need to know in which space. Rio, Atocha or Castellana?",
-            text: "I need to know in which space. Rio, Atocha or Castellana?",
+            speech: 'In what City?',
+            text: 'In what City?',
           }));
     }
-    else {
-        console.log("Estamos al final");
-        const space = conv.parameters.Space;
-        const date = conv.parameters.date;
-        const response = "I have a room ready for you in the space " +space+ " on " + date;
-
+    else if(!conv.parameters.Space) {
+        const data = fs.readFileSync("./spaces.json");
+        let options = [];
+        dataJson = JSON.parse(data);
+        dataJson.cities.forEach(city => {
+            if (city.name === conv.parameters.City) {
+                city.spaces.forEach(space => {
+                    const basicCard = {"optionInfo": {
+                        "key": space
+                    },
+                    "title": space,
+                    "description": space,
+                    "image": {
+                        "url": "https://spaces.kollekt.fm/img/Facebook-Logo_Spaces-1200x630--1200x630.png",
+                        "accessibilityText": "Math & prime numbers"
+                    }}
+                    options.push(basicCard);
+                })
+            }
+        });
+        //console.log(options);
+        console.log("Salimos del foreach");
+        let response = new Carousel({items: options});
         conv.ask(new SimpleResponse({
-            speech: response,
-            text: response,
+            speech: 'Ok, which of these Rooms do you want to book?',
+            text: 'Ok, which of these Rooms do you want to book?',
           }));
+        conv.ask(response);
+    } else {
+        conv.ask(new SimpleResponse({
+            speech: 'Ok! We have your room booked!',
+            text: 'Ok! We have your room booked!',
+          }))
     }
 
 })
