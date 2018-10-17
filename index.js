@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.post('/', async function (request, response) {
     const agent = new WebhookClient({ request, response });
-
+    agent.data.myVariable = 2;
     async function fallback (agent) {
         agent.add("This is the fallback message");
     }
@@ -21,7 +21,7 @@ app.post('/', async function (request, response) {
     agent.handleRequest(intentMap);
 });
 
-const port = process.env.PORT || 8765; 
+const port = process.env.PORT || 8764; 
 app.listen(port, function () {
     console.log(`App listening in port ${port}`); 
   });
