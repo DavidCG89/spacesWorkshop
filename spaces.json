@@ -1,0 +1,49 @@
+{
+    "cities": 
+    [{
+        "name": "Madrid",
+        "spaces": [
+            {
+                "roomName": "Rio",
+                "description": "Rio",
+                "img": "https://d1ic4altzx8ueg.cloudfront.net/finder-us/wp-uploads/sites/92/2017/09/Brazil.jpg",
+                "accText": "Rio"
+            },
+            {
+                "roomName": "Atocha",
+                "description": "Atocha",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Estaci%C3%B3n_de_Atocha_-_felipe_gabaldon.jpg/245px-Estaci%C3%B3n_de_Atocha_-_felipe_gabaldon.jpg",
+                "accText": "Atocha"
+            },
+            {
+                "roomName": "Castellana",
+                "description": "Castellana",
+                "img": "https://ep00.epimg.net/diario/imagenes/2009/10/04/madrid/1254655457_740215_0000000000_noticia_normal.jpg",
+                "accText": "Castellana"
+            }
+        ]
+    },
+    {
+        "name": "Barcelona",
+        "spaces": [
+            {
+                "roomName": "RioC",
+                "description": "RioC Room",
+                "img": "https://d1ic4altzx8ueg.cloudfront.net/finder-us/wp-uploads/sites/92/2017/09/Brazil.jpg",
+                "accText": "RioC Room"
+            },
+            {
+                "roomName": "AtochaC",
+                "description": "AtochaC Room",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Estaci%C3%B3n_de_Atocha_-_felipe_gabaldon.jpg/245px-Estaci%C3%B3n_de_Atocha_-_felipe_gabaldon.jpg",
+                "accText": "AtochaC Room"
+            },
+            {
+                "roomName": "CastellanaC",
+                "description": "CastellanaC Room",
+                "img": "https://ep00.epimg.net/diario/imagenes/2009/10/04/madrid/1254655457_740215_0000000000_noticia_normal.jpg",
+                "accText": "CastellanaC Room"
+            }
+        ]
+    }]
+}
